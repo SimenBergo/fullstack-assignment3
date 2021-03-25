@@ -1,0 +1,241 @@
+{
+	"info": {
+		"_postman_id": "af71dbf9-9068-4fc5-8958-b8f4c22aa690",
+		"name": "oblig3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"david@gmail.com\",\n    \"password\" : \"hehe1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"David\",\r\n    \"surname\" : \"Baker\",\r\n    \"email\" : \"david@gmail.com\",\r\n    \"role\" : \"Student\",\r\n    \"password\" : \"hehe1234\",\r\n    \"place\" : \"Home-Office\",\r\n    \"status\" : \"Available\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Forgot password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"david@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/forgot-password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"forgot-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "students check users-db",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/student/check-users?secret_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYwNWE1YjJiYTcyZjEwMTM5MGY0MzRjNSIsImVtYWlsIjoiZGF2aWRAZ21haWwuY29tIiwicm9sZSI6IlN0dWRlbnQifSwiaWF0IjoxNjE2NTM0MzgyfQ.Pxc6Qt1CgWSN7L9gBzHNN3IAgJvchMvFKOfMBb5_tgE",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"student",
+						"check-users"
+					],
+					"query": [
+						{
+							"key": "secret_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYwNWE1YjJiYTcyZjEwMTM5MGY0MzRjNSIsImVtYWlsIjoiZGF2aWRAZ21haWwuY29tIiwicm9sZSI6IlN0dWRlbnQifSwiaWF0IjoxNjE2NTM0MzgyfQ.Pxc6Qt1CgWSN7L9gBzHNN3IAgJvchMvFKOfMBb5_tgE"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Teacher check users-db",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/teacher/check-users?secret_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYwNWE1YjJiYTcyZjEwMTM5MGY0MzRjNSIsImVtYWlsIjoiZGF2aWRAZ21haWwuY29tIiwicm9sZSI6IlN0dWRlbnQifSwiaWF0IjoxNjE2NTM0MzgyfQ.Pxc6Qt1CgWSN7L9gBzHNN3IAgJvchMvFKOfMBb5_tgE",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"teacher",
+						"check-users"
+					],
+					"query": [
+						{
+							"key": "secret_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYwNWE1YjJiYTcyZjEwMTM5MGY0MzRjNSIsImVtYWlsIjoiZGF2aWRAZ21haWwuY29tIiwicm9sZSI6IlN0dWRlbnQifSwiaWF0IjoxNjE2NTM0MzgyfQ.Pxc6Qt1CgWSN7L9gBzHNN3IAgJvchMvFKOfMBb5_tgE"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"david@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/teacher/deleteuser?secret_token=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"teacher",
+						"deleteuser"
+					],
+					"query": [
+						{
+							"key": "secret_token",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"mikeolsen@gmail.com\",\n    \"surname\" : \"Jensen\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/teacher/updateuser?secret_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYwNWE1NjRmOWQ4NmI1MzkxODUwYjMxZiIsImVtYWlsIjoibWlrZW9sc2VuQGdtYWlsLmNvbSIsInJvbGUiOiJUZWFjaGVyIn0sImlhdCI6MTYxNjUzMzEyOH0.ffRiPtutCuv1Lp3nsDvlNMfO0Mw_vKUhutq0OJaDn0o",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"teacher",
+						"updateuser"
+					],
+					"query": [
+						{
+							"key": "secret_token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYwNWE1NjRmOWQ4NmI1MzkxODUwYjMxZiIsImVtYWlsIjoibWlrZW9sc2VuQGdtYWlsLmNvbSIsInJvbGUiOiJUZWFjaGVyIn0sImlhdCI6MTYxNjUzMzEyOH0.ffRiPtutCuv1Lp3nsDvlNMfO0Mw_vKUhutq0OJaDn0o"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Secret place",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/teacher/profile?secret_token=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"teacher",
+						"profile"
+					],
+					"query": [
+						{
+							"key": "secret_token",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
